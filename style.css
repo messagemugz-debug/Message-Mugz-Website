@@ -1,2 +1,165 @@
-/* Shared Stylesheet */
-body { font-family: Arial, sans-serif; margin:0; padding:0; }
+/* Shared Stylesheet for Message Mugz */
+
+/* Reset and base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* Navbar styles */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.navbar ul li a {
+  color: #333;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.navbar ul li a.active, .navbar ul li a:hover {
+  color: #ff6f61;
+}
+
+/* Carousel styles */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 20px 0;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+.carousel-dots button {
+  border: none;
+  background-color: #ddd;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.carousel-dots button.active {
+  background-color: #ff6f61;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+.carousel-arrow.left {
+  left: 10px;
+}
+.carousel-arrow.right {
+  right: 10px;
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.product-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #ff6f61;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: #e55b50;
+}
+
+/* Page headers */
+.page-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #eee;
+}
+.page-header h1 {
+  margin-bottom: 10px;
+  color: #ff6f61;
+}
+
+/* Info sections */
+.info-section, .privacy-content, .terms-content, .faq-list, .contact-info, .steps-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.steps-container .step {
+  margin-bottom: 20px;
+}
+.steps-container .step h2 {
+  color: #ff6f61;
+}
+.faq-item h2 {
+  color: #ff6f61;
+  margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+footer ul li a {
+  color: #333;
+}
